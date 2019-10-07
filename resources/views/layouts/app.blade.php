@@ -32,9 +32,35 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
+                        @auth
                     <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    Menu <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('kategori_artikel.index') }}">{{ __('Kategori Artikel') }}</a>
+                                    <a class="dropdown-item" href="{{ route('artikel.index') }}">{{ __('Artikel') }}</a>
+                                    <a class="dropdown-item" href="{{ route('kategori_berita.index') }}">{{ __('Kategori Berita') }}</a>
+                                    <a class="dropdown-item" href="{{ route('berita.index') }}">{{ __('berita') }}</a>
+                                    <a class="dropdown-item" href="{{ route('kategori_galeri.index') }}">{{ __('Kategori galeri') }}</a>
+                                    <a class="dropdown-item" href="{{ route('galeri.index') }}">{{ __('galeri') }}</a>
+                                    <a class="dropdown-item" href="{{ route('kategori_pengumuman.index') }}">{{ __('Kategori Pengumuman') }}</a>
+                                    <a class="dropdown-item" href="{{ route('pengumuman.index') }}">{{ __('pengumuman') }}</a>
+                                </div>
+                            </li>
+
+
+
+
+                        
+                        <!--<li class="nav-item">
+                                <a class="nav-link" href="{{ route('kategori_artikel.index') }}">{{ __('Kategori Artikel') }}</a>
+                            </li>-->
 
                     </ul>
+                        @endauth
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
